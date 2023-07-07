@@ -38,7 +38,7 @@ function getWeatherData(){
         let {latitude,longitude} =success.coords;
         
     
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=15.6661665&lon=78.0880129&exclude=hourly,minutely&units=metric&appid=49cc8c821cd2aff9af04c9f98c36eb74`).then(res => res.json()).then(data=>{
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=`+latitude+`&lon=`+longitude+`&exclude=hourly,minutely&units=metric&appid=49cc8c821cd2aff9af04c9f98c36eb74`).then(res => res.json()).then(data=>{
             showWeatherData(data);
         })
     })
